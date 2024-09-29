@@ -1,6 +1,29 @@
 import SwiftUI
 import shared
 
+extension ArticlesScreen {
+    @MainActor
+    class ArticlesViewModelWrapper: ObservableObject {
+        let articlesViewModel: ArticlesViewModel
+
+
+        init() {
+            articlesViewModel = ArticlesViewModel()
+            articlesState = articlesViewModel.articlesState.value
+        }
+
+        @Published var articlesState: ArticlesState
+
+        func startObserving() {
+            Task {
+                for await articlesS in articlesViewModel.articlesState {
+                    self.articlesState = articlesS
+                }
+            }
+        }
+    }
+}
+
 struct ArticlesScreen: View {
 
     @ObservedObject private(set) var viewModel: ArticlesViewModelWrapper
@@ -9,7 +32,7 @@ struct ArticlesScreen: View {
         VStack {
             AppBar()
 
-            if viewModel.articlesState.loading {
+            if viewModel.articlesState.isLoading {
                 Loader()
             }
 
