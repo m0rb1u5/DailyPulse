@@ -36,11 +36,12 @@ import com.example.dailypulse.articles.ArticlesViewModel
 @Composable
 fun ArticlesScreen(
     articlesViewModel: ArticlesViewModel,
+    onAboutButtonClick: () -> Unit,
 ) {
     val articlesState = articlesViewModel.articlesState.collectAsState()
 
     Column {
-        AppBar()
+        AppBar(onAboutButtonClick)
 
         if (articlesState.value.isLoading)
             Loader()
@@ -54,9 +55,20 @@ fun ArticlesScreen(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun AppBar(
+    onAboutButtonClick: () -> Unit,
 ) {
     TopAppBar(
         title = { Text(text = "Articles") },
+        actions = {
+            IconButton(
+                onClick = onAboutButtonClick,
+            ) {
+                Icon(
+                    imageVector = Icons.Outlined.Info,
+                    contentDescription = "About Device Button",
+                )
+            }
+        }
     )
 }
 
