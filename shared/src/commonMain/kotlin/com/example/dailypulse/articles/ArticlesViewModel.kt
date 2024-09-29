@@ -21,7 +21,11 @@ class ArticlesViewModel : BaseViewModel() {
 
             delay(timeMillis = 500)
 
-            _articlesState.emit(ArticlesState())
+            _articlesState.emit(
+                ArticlesState(
+                    articles = fetchedArticles,
+                )
+            )
         }
     }
 
