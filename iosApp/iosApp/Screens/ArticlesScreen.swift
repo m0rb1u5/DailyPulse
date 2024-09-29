@@ -30,8 +30,6 @@ struct ArticlesScreen: View {
 
     var body: some View {
         VStack {
-            AppBar()
-
             if viewModel.articlesState.isLoading {
                 Loader()
             }
@@ -53,14 +51,7 @@ struct ArticlesScreen: View {
         }.onAppear{
             self.viewModel.startObserving()
         }
-    }
-}
-
-struct AppBar: View {
-    var body: some View {
-        Text("Articles")
-            .font(.largeTitle)
-            .fontWeight(.bold)
+        .navigationTitle("Articles")
     }
 }
 
