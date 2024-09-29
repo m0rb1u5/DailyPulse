@@ -104,7 +104,3 @@ struct ErrorMessage: View {
             .font(.title)
     }
 }
-
-#Preview {
-    ArticlesScreen()
-}
