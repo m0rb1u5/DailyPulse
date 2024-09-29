@@ -38,7 +38,7 @@ private fun Toolbar(
 ) {
     TopAppBar(
         title = { Text(text = "About Device") },
-        actions = {
+        navigationIcon = {
             IconButton(
                 onClick = onUpButtonClick,
             ) {
