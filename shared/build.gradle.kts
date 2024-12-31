@@ -35,6 +35,7 @@ kotlin {
         androidMain.dependencies {
             implementation(libs.androidx.lifecycle.viewmodel.ktx)
             implementation(libs.ktor.client.okhttp)
+            implementation(libs.dotenv.kotlin)
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)

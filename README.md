@@ -9,6 +9,7 @@
     1. [Kotlin](https://plugins.jetbrains.com/plugin/6954-kotlin). If installed then update the plugin: To update the plugin, on the Android Studio welcome screen, select **Plugins | Installed**. Click **Update** next to Kotlin. You can also check the Kotlin version in **Tools | Kotlin | Configure Kotlin Plugin Updates**.
     2. [Kotlin Multiplatform Mobile](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile).
     3. [Genymotion](https://plugins.jetbrains.com/plugin/7269-genymotion).
+    4. [CodeGlance Pro](https://plugins.jetbrains.com/plugin/18824-codeglance-pro). 
 5. [Install Genymotion Desktop](https://www.genymotion.com/product-desktop/download/).
 6. [Install KDoctor](https://github.com/Kotlin/kdoctor) (just in macOS): `brew install kdoctor`.
 
@@ -25,6 +26,7 @@
     - [Set up a real iOS device](https://docs.flutter.dev/get-started/install/macos/mobile-ios?tab=physical#configure-your-target-ios-device).
 4. To verify if all components of a complete Kotlin Multiplatform development environment were installed, run the following command: `kdoctor`. You may ignore KDoctor's warnings regarding the CocoaPods installation (just in macOS).
 5. Open the project in Android Studio and wait it to index and install Gradle dependencies.
+6. Create the [./shared/.env](./shared/.env) file using the [./shared/.env.example](./shared/.env.example) like reference.
 
 ## Run and Debug
 
