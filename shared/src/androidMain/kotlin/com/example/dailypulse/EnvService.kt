@@ -2,7 +2,7 @@ package com.example.dailypulse
 
 import io.github.cdimascio.dotenv.dotenv
 
-actual class EnvService {
+actual class EnvService actual constructor() {
     private val dotenv = dotenv {
         directory = "./"
         filename = ".env"

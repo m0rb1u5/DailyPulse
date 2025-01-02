@@ -1,5 +1,5 @@
 package com.example.dailypulse
 
-expect class EnvService {
+expect class EnvService() {
     fun getEnv(key: String): String?
 }

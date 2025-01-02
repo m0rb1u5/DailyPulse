@@ -6,7 +6,7 @@ import platform.Foundation.NSString
 import platform.Foundation.NSUTF8StringEncoding
 import platform.Foundation.stringWithContentsOfFile
 
-actual class EnvService {
+actual class EnvService actual constructor() {
     @OptIn(ExperimentalForeignApi::class)
     private val envMap: Map<String, String> by lazy {
         val path = NSBundle.mainBundle.pathForResource("shared/.env", null)
