@@ -26,7 +26,7 @@
     - [Set up a real iOS device](https://docs.flutter.dev/get-started/install/macos/mobile-ios?tab=physical#configure-your-target-ios-device).
 4. To verify if all components of a complete Kotlin Multiplatform development environment were installed, run the following command: `kdoctor`. You may ignore KDoctor's warnings regarding the CocoaPods installation (just in macOS).
 5. Open the project in Android Studio and wait it to index and install Gradle dependencies.
-6. Create the [./shared/.env](./shared/.env) file using the [./shared/.env.example](./shared/.env.example) like reference.
+6. Change tje `apiKey` var on the `ArticlesService.kt` file with your [News API](https://newsapi.org/) generated API Key. 
 
 ## Run and Debug
 

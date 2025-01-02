@@ -1,7 +1,6 @@
 package com.example.dailypulse.articles
 
 import com.example.dailypulse.BaseViewModel
-import com.example.dailypulse.EnvService
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.serialization.kotlinx.json.json
@@ -33,10 +32,9 @@ class ArticlesViewModel : BaseViewModel() {
             }
         }
 
-        val envService = EnvService()
-        val articlesService = ArticlesService(httpClient, envService)
+        val service = ArticlesService(httpClient)
 
-        useCase = ArticlesUseCase(articlesService)
+        useCase = ArticlesUseCase(service)
         getArticles()
     }
 
