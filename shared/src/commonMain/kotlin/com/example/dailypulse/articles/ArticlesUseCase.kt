@@ -14,4 +14,8 @@ class ArticlesUseCase(private val articlesService: ArticlesService) {
             imageUrl = raw.imageUrl ?: "https://archive.org/download/placeholder-image/placeholder-image.jpg",
         )
     }
+
+    private fun getDaysAgoString(date: String): String {
+
+    }
 }
